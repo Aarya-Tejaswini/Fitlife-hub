@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children’s Health</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf3f3;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/free-vector/happy-children-jumping-summer-meadow_74855-5852.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #1a1414;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Navigation Styling */
+        nav {
+            background-color: rgba(240, 235, 235, 0.644);
+            padding: 10px 0;
+            margin-bottom: 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 30px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #322d2d;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            color: #cecbcb;
+            transition: color 0.3s ease;
+        }
+
+        /* Main Content Styling */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .health-tips {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .health-tips h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: rgba(4, 4, 4, 0.6); /* Dark color for headings */
+        }
+
+        /* Tips Button Styling */
+        .tips-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tip-btn {
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent background with a very light white tint */
+            color: #1f1111;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: 2px solid #1f1111; /* White border for better contrast */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border 0.3s ease;
+            width: 250px;
+            text-align: center;
+        }
+
+        .tip-btn a {
+            text-decoration: none;
+            color: inherit; /* Inherit color for links */
+        }
+
+        .tip-btn:hover {
+            background-color: rgba(255, 255, 255, 0.4); /* Slightly darker on hover */
+            border: 2px solid rgba(255, 255, 255, 1); /* Brighter border on hover */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .tip-btn {
+                font-size: 1.1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0 10px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .tip-btn {
+                font-size: 1em;
+                padding: 10px 20px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Children’s Health</h1>
+        <p>Health tips and resources for children.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="healthcare.html">Back to Healthcare</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="health-tips">
+            <h2>Health Tips for Children</h2>
+            <div class="tips-buttons">
+                <button class="tip-btn"><a href="childnutri.html">Child Nutrition</a></button>
+                <button class="tip-btn"><a href="vaccine.html">Vaccination Schedule</a></button>
+                <button class="tip-btn"><a href="mentalhchil.html">Mental Health for Children</a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FitLife Hub. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
