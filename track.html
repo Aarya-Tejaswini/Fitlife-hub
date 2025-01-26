@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Health</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1000px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .question {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .question:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .question p {
+            font-size: 1.1rem;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        .question input {
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #27ae60;
+            display: none;
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: #27ae60;
+            text-decoration: none;
+        }
+
+        .back-to-top:hover {
+            color: #2ecc71;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Track Your Health</h2>
+
+    <form id="healthForm">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. How often do you exercise?</p>
+            <input type="radio" name="q1" value="4"> Daily<br>
+            <input type="radio" name="q1" value="3"> 3-4 times a week<br>
+            <input type="radio" name="q1" value="2"> Once a week<br>
+            <input type="radio" name="q1" value="1"> Rarely<br>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. How would you rate your diet?</p>
+            <input type="radio" name="q2" value="4"> Very Healthy<br>
+            <input type="radio" name="q2" value="3"> Healthy<br>
+            <input type="radio" name="q2" value="2"> Unhealthy<br>
+            <input type="radio" name="q2" value="1"> Very Unhealthy<br>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. How many hours of sleep do you get on average?</p>
+            <input type="radio" name="q3" value="4"> 8+ hours<br>
+            <input type="radio" name="q3" value="3"> 6-7 hours<br>
+            <input type="radio" name="q3" value="2"> 4-5 hours<br>
+            <input type="radio" name="q3" value="1"> Less than 4 hours<br>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. Do you drink water regularly throughout the day?</p>
+            <input type="radio" name="q4" value="4"> Yes, always<br>
+            <input type="radio" name="q4" value="3"> Sometimes<br>
+            <input type="radio" name="q4" value="2"> Rarely<br>
+            <input type="radio" name="q4" value="1"> Never<br>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. How often do you feel stressed?</p>
+            <input type="radio" name="q5" value="1"> Very often<br>
+            <input type="radio" name="q5" value="2"> Occasionally<br>
+            <input type="radio" name="q5" value="3"> Rarely<br>
+            <input type="radio" name="q5" value="4"> Never<br>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. Do you smoke?</p>
+            <input type="radio" name="q6" value="1"> Yes<br>
+            <input type="radio" name="q6" value="4"> No<br>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. How often do you consume alcohol?</p>
+            <input type="radio" name="q7" value="1"> Daily<br>
+            <input type="radio" name="q7" value="2"> 2-3 times a week<br>
+            <input type="radio" name="q7" value="3"> Once a week<br>
+            <input type="radio" name="q7" value="4"> Rarely<br>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. Do you experience any chronic pain?</p>
+            <input type="radio" name="q8" value="1"> Yes, frequently<br>
+            <input type="radio" name="q8" value="2"> Sometimes<br>
+            <input type="radio" name="q8" value="3"> Rarely<br>
+            <input type="radio" name="q8" value="4"> Never<br>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. How often do you visit a healthcare professional?</p>
+            <input type="radio" name="q9" value="4"> Regularly<br>
+            <input type="radio" name="q9" value="3"> Once a year<br>
+            <input type="radio" name="q9" value="2"> Every couple of years<br>
+            <input type="radio" name="q9" value="1"> Rarely<br>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. How would you rate your overall energy levels?</p>
+            <input type="radio" name="q10" value="4"> Very High<br>
+            <input type="radio" name="q10" value="3"> Moderate<br>
+            <input type="radio" name="q10" value="2"> Low<br>
+            <input type="radio" name="q10" value="1"> Very Low<br>
+        </div>
+
+        <button type="button" onclick="calculateHealth()">Submit</button>
+    </form>
+
+    <div id="healthResult" class="result"></div>
+
+    <a href="#top" class="back-to-top">Back to Top</a>
+</div>
+
+<script>
+    function calculateHealth() {
+        let totalScore = 0;
+        let totalQuestions = 10;
+
+        for (let i = 1; i <= totalQuestions; i++) {
+            let question = document.querySelector(`input[name="q${i}"]:checked`);
+            if (question) {
+                totalScore += parseInt(question.value);
+            }
+        }
+
+        let healthPercentage = (totalScore / (totalQuestions * 4)) * 100;
+        let healthLevel = '';
+
+        if (healthPercentage >= 80) {
+            healthLevel = 'Excellent';
+        } else if (healthPercentage >= 60) {
+            healthLevel = 'Good';
+        } else if (healthPercentage >= 40) {
+            healthLevel = 'Average';
+        } else {
+            healthLevel = 'Needs Improvement';
+        }
+
+        document.getElementById('healthResult').innerHTML = `Your Health Score: ${healthPercentage.toFixed(2)}% - Health Level: ${healthLevel}`;
+        document.getElementById('healthResult').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
