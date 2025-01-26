@@ -3,198 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women’s Health</title>
-    <style>
-        /* General Body Styling */
+    <title>Women’s Fitness</title>
+    <style>    
+        /* Set the background image */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-image: url('https://www.b2w.tv/hubfs/Blog%20Banners.png'); /* Background image */
+            background-image: url(https://images.ctfassets.net/0k812o62ndtw/KvroPtTM2awVauxku2ypf/da3a83b54d54f1dd96fb5ff059a66919/BenefitsOfStrengthTrainingForWomencdc853cb74a233646df40500d0cf977b.jpg?w=1024&q=85); /* Replace with your image path */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: #282323;
+            height: 100vh;
+            color: #333; /* Default text color */
         }
 
-        /* Header Styling */
-        header {
-            text-align: center;
+        /* Content Styling */
+        .container {
+            position: relative;
             padding: 40px 20px;
-            background-color: rgba(219, 195, 195, 0.6); /* Dark transparent background */
-            margin-bottom: 30px;
-            border-radius: 8px;
+            z-index: 1;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for header */
+            color: white;
+            padding: 40px 20px;
+            font-size: 30px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+            font-size: 36px;
+            margin: 0;
         }
 
-        header p {
-            font-size: 1.2em;
+        .content {
+            padding: 30px;
+            margin-top: 20px;
         }
 
-        /* Navigation Styling */
-        nav {
-            background-color: rgba(234, 220, 220, 0.6);
-            padding: 10px 0;
-            margin-bottom: 40px;
+        .section {
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
+        .section h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .section p {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            align-items: start;
+            margin-top: 30px;
+        }
+
+        .option-card {
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+            padding: 25px;
+            width: 280px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for contrast */
             display: flex;
+            flex-direction: column;
             justify-content: center;
-        }
-
-        nav ul li {
-            margin-right: 30px;
-        }
-
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #322d2d;
-            font-size: 1.2em;
-            display: flex;
             align-items: center;
         }
 
-        nav ul li a:hover {
-            color: #333;
+        .option-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .option-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .option-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .option-card a {
+            text-decoration: none;
+            color: #FF69B4; /* More vibrant text color */
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
             transition: color 0.3s ease;
         }
 
-        /* Main Content Styling */
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .option-card a:hover {
+            color: #d40077; /* Hover color */
         }
 
-        .health-tips {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .health-tips h2 {
-            font-size: 2.2em;
-            margin-bottom: 30px;
-            color: rgba(0, 0, 0, 0.6); /* Dark color for headings */
-        }
-
-        /* Tips Button Styling */
-        .tips-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .tip-btn {
-            background-color: rgba(255, 255, 255, 0.1); /* Transparent background with a very light white tint */
-            color: #1f1111;
-            font-size: 1.2em;
-            padding: 15px 30px;
-            border: 2px solid #1f1111; /* White border for better contrast */
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, border 0.3s ease;
-            width: 250px;
-            text-align: center;
-        }
-
-        .tip-btn a {
-            text-decoration: none;
-            color: inherit; /* Inherit color for links */
-        }
-
-        .tip-btn:hover {
-            background-color: rgba(255, 255, 255, 0.4); /* Slightly darker on hover */
-            border: 2px solid rgba(255, 255, 255, 1); /* Brighter border on hover */
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 50px;
-            border-radius: 8px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            header p {
-                font-size: 1.1em;
-            }
-
-            .tip-btn {
-                font-size: 1.1em;
-                padding: 12px 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 0 10px;
-            }
-
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-
-            .tip-btn {
-                font-size: 1em;
-                padding: 10px 20px;
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Women’s Health</h1>
-        <p>Health tips and resources for women of all ages.</p>
+        <h1>Women’s Fitness</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="healthcare.html">Back to Healthcare</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <!-- Introduction to Women’s Fitness -->
+        <div class="section">
+            <h2>Explore Women’s Fitness Topics</h2>
+            <p>Click on any of the following options to learn more about fitness designed specifically for women.</p>
+        </div>
 
-    <main>
-        <section class="health-tips">
-            <h2>Health Tips for Women</h2>
-            <div class="tips-buttons">
-                <button class="tip-btn"><a href="breastcancer.html">Breast Cancer Awareness</a></button>
-                <button class="tip-btn"><a href="pregna.html">Pregnancy Care</a></button>
-                <button class="tip-btn"><a href="mentalhel.html">Mental Health and Well-being</a></button>
-                <button class="tip-btn"><a href="nutritionw.html">Balanced Diet and Nutrition</a></button>
+        <div class="options">
+            <!-- Introduction to Women’s Fitness -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS16BoRCCwayQcnw37hH3xQPBfrd4YUlpmYZA&s" alt="Introduction to Fitness">
+                <a href="introduction-to-womens-fitness.html">Introduction to Women’s Fitness</a>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 FitLife Hub. All Rights Reserved.</p>
-    </footer>
+            <!-- Types of Workouts for Women -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsEoLoxJYJnMhT8oj5F-iZ_lN2WgdUySvaBA&s" alt="Types of Workouts">
+                <a href="types-of-workouts-for-women.html">Types of Workouts for Women</a>
+            </div>
+
+            <!-- Pre/Postnatal Fitness -->
+            <div class="option-card">
+                <img src="https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/fit_woman_doing_a_dumbbell_lunge_in_the_gym.jpg?itok=G3wyY5Is" alt="Pre/Postnatal Fitness">
+                <a href="prenatal-postnatal-fitness.html">Pre/Postnatal Fitness</a>
+            </div>
+
+            <!-- Women’s Weight Loss Programs -->
+            <div class="option-card">
+                <img src="https://cdn.shopify.com/s/files/1/1950/1891/files/SCULPT-CURVES_480x480.jpg?v=1639627903" alt="Weight Loss Programs">
+                <a href="womens-weight-loss-programs.html">Women’s Weight Loss Programs</a>
+            </div>
+
+            <!-- Fitness Nutrition for Women -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVnrUCYTPvV2AKZ0UxsoC_20NSOeVrsrlug&s" alt="Fitness Nutrition">
+                <a href="fitness-nutrition-for-women.html">Fitness Nutrition for Women</a>
+            </div>
+
+            <!-- Fitness Challenges for Women -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK9woz4VhuSAE4ytXcNYrq8ItLq63lTiKEzw&s" alt="Fitness Challenges">
+                <a href="fitness-challenges-for-women.html">Fitness Challenges for Women</a>
+            </div>
+
+            <!-- Mental Health & Fitness for Women -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjelY4Omn3Zjlx8coRZDT2oev4yJXjbsU-bQ&s" alt="Mental Health & Fitness">
+                <a href="mental-health-fitness-for-women.html">Mental Health & Fitness for Women</a>
+            </div>
+
+            <!-- Women’s Fitness Success Stories -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRDps59gWaiqm3VX4W4DDpz2hv3BpgQBl0xg&s" alt="Success Stories">
+                <a href="womens-fitness-success-stories.html">Women’s Fitness Success Stories</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

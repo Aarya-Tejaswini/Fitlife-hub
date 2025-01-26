@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://www.washingtonpost.com/resizer/DDcGOaMNWItfD381fVM2_W6TnBA=/arc-anglerfish-washpost-prod-washpost/public/CQF3KSWZ4ML64HHLQMQKZPR5NI.jpg); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 40px 20px;
+            border-bottom: 3px solid #fff;
+        }
+
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 48px;
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+
+        .description-box {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-top: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark box background */
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #333; /* Neutral dark background color */
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .button:hover {
+            background-color: #555; /* Darker shade when hovered */
+            transform: scale(1.05);
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fitness</h1>
+    </header>
+
+    <div class="description-box">
+        <p>Fitness is an essential part of maintaining good health and well-being. It includes various activities that improve physical strength, flexibility, and mental clarity. Choose a category below to explore fitness options tailored to different needs.</p>
+    </div>
+
+    <div class="container">
+        <div class="button-container">
+            <!-- Each button now links to a different page -->
+            <a href="children.html" class="button">Children</a>
+            <a href="women.html" class="button">Women</a>
+            <a href="adults.html" class="button">Adults</a>
+            <a href="teenagers.html" class="button">Teenagers</a>
+            <a href="athletes.html" class="button">Athletes</a>
+            <a href="general.html" class="button">General Fitness</a>
+            <a href="elderly.html" class="button">Elderly Adults</a> <!-- New option added for Elderly Adults -->
+        </div>
+    </div>
+
+</body>
+</html>
