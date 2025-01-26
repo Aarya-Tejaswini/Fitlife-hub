@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elderly Adults' Fitness</title>
+    <title>Athletes' Fitness</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://images.squarespace-cdn.com/content/v1/5652f717e4b0070eb05c2f63/1652355240609-6HDRY0CA19PLQJLA1N4U/seniors+exercising+with+weights.jpg?format=500w'); /* Replace with your background image */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYugqo8kfGjRnEjhBlbwmVBqCgD_2-z3TlifnzgCtlG4Cv1mr6wPMOdPwEtYqODzGPTqs&usqp=CAU'); /* Replace with your background image */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            margin: 0;
-            padding: 0;
             text-align: center;
             color: white;
         }
@@ -43,25 +43,63 @@
             padding: 30px;
         }
 
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        .content {
+            margin-top: 20px;
+            display: none;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
         .section {
             background-color: rgba(255, 255, 255, 0.7);
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .section h2 {
             color: #FF69B4;
+            margin-bottom: 15px;
             font-size: 28px;
             font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .section p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 20px;
         }
 
         .options {
@@ -124,40 +162,44 @@
 <body>
 
     <header>
-        <h1>Elderly Adults' Fitness</h1>
-        <p class="description">Staying active is vital for maintaining mobility, strength, and overall health in later years. Explore the following fitness options designed for elderly adults.</p>
+        <h1>Athletes' Fitness</h1>
     </header>
 
     <div class="container">
-        <div class="section">
-            <h2>Explore Fitness Options for Elderly Adults</h2>
-            <p>Select any of the following options to learn more about fitness topics tailored for elderly adults.</p>
-        </div>
+       
 
         <div class="options">
-            <!-- Low-Impact Cardiovascular Exercises -->
+            <!-- Strength and Power Training -->
             <div class="option-card">
-                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Low-Impact Cardiovascular Exercises">
-                <a href="low-impact-cardiovascular.html">Low-Impact Cardiovascular Exercises</a>
+                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Strength Training">
+                <a href="strength-and-power-training.html">Strength and Power Training</a>
             </div>
 
-            <!-- Strength & Muscle Maintenance -->
+           
+
+           
+
+           
+
+            <!-- Recovery Techniques -->
             <div class="option-card">
-                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Strength & Muscle Maintenance">
-                <a href="strength-muscle-maintenance.html">Strength & Muscle Maintenance</a>
+                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Recovery Techniques">
+                <a href="recovery-techniques.html">Recovery Techniques</a>
             </div>
 
-            <!-- Balance & Fall Prevention -->
+            <!-- Nutrition for Athletes -->
             <div class="option-card">
-                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Balance & Fall Prevention">
-                <a href="balance-fall-prevention.html">Balance & Fall Prevention</a>
+                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Nutrition for Athletes">
+                <a href="nutrition-for-athletes.html">Nutrition for Athletes</a>
             </div>
 
-            <!-- Healthy Eating for Seniors -->
+            <!-- Injury Prevention and Rehab -->
             <div class="option-card">
-                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Healthy Eating for Seniors">
-                <a href="healthy-eating-seniors.html">Healthy Eating Habits</a>
+                <img src="https://thumbs.dreamstime.com/b/power-muscular-bodybuilder-guy-doing-pullups-gym-fitness-man-black-white-image-pumping-up-lats-muscles-91597926.jpg" alt="Injury Prevention">
+                <a href="injury-prevention-and-rehabilitation.html">Injury Prevention and Rehab</a>
             </div>
+
+         
         </div>
     </div>
 

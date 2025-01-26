@@ -3,197 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Children’s Health</title>
+    <title>Children's Fitness</title>
     <style>
-        /* General Body Styling */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #fdf3f3;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://img.freepik.com/free-vector/happy-children-jumping-summer-meadow_74855-5852.jpg'); /* Background image */
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.nationwidechildrens.org/-/media/nch/700childrens/2016/03/blog-sports-med.jpg'); /* Replace with your background image */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: #1a1414;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
         }
 
-        /* Header Styling */
         header {
-            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: white;
             padding: 40px 20px;
-            
-            margin-bottom: 30px;
-            border-radius: 8px;
+            font-size: 28px;
+            text-align: center;
+            border-bottom: 3px solid #fff;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+            font-size: 40px;
+            margin: 0;
         }
 
-        header p {
-            font-size: 1.2em;
+        .description {
+            font-size: 20px;
+            margin-top: 10px;
+            padding: 0 30px;
+            line-height: 1.6;
         }
 
-        /* Navigation Styling */
-        nav {
-            background-color: rgba(240, 235, 235, 0.644);
-            padding: 10px 0;
-            margin-bottom: 40px;
+        .container {
+            padding: 30px;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
+        .section {
+            background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #FF69B4;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            align-items: start;
+            margin-top: 30px;
+        }
+
+        .option-card {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            padding: 25px;
+            width: 280px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for contrast */
             display: flex;
+            flex-direction: column;
             justify-content: center;
-        }
-
-        nav ul li {
-            margin-right: 30px;
-        }
-
-        nav ul li:last-child {
-            margin-right: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #322d2d;
-            font-size: 1.2em;
-            display: flex;
             align-items: center;
+            text-align: center;
         }
 
-        nav ul li a:hover {
-            color: #cecbcb;
+        .option-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .option-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .option-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .option-card a {
+            text-decoration: none;
+            color: #FF69B4;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
             transition: color 0.3s ease;
         }
 
-        /* Main Content Styling */
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .health-tips {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .health-tips h2 {
-            font-size: 2.2em;
-            margin-bottom: 30px;
-            color: rgba(4, 4, 4, 0.6); /* Dark color for headings */
-        }
-
-        /* Tips Button Styling */
-        .tips-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .tip-btn {
-            background-color: rgba(255, 255, 255, 0.1); /* Transparent background with a very light white tint */
-            color: #1f1111;
-            font-size: 1.2em;
-            padding: 15px 30px;
-            border: 2px solid #1f1111; /* White border for better contrast */
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, border 0.3s ease;
-            width: 250px;
-            text-align: center;
-        }
-
-        .tip-btn a {
-            text-decoration: none;
-            color: inherit; /* Inherit color for links */
-        }
-
-        .tip-btn:hover {
-            background-color: rgba(255, 255, 255, 0.4); /* Slightly darker on hover */
-            border: 2px solid rgba(255, 255, 255, 1); /* Brighter border on hover */
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 50px;
-            border-radius: 8px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            header p {
-                font-size: 1.1em;
-            }
-
-            .tip-btn {
-                font-size: 1.1em;
-                padding: 12px 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 0 10px;
-            }
-
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-
-            .tip-btn {
-                font-size: 1em;
-                padding: 10px 20px;
-                width: 100%;
-            }
+        .option-card a:hover {
+            color: #d40077;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Children’s Health</h1>
-        <p>Health tips and resources for children.</p>
+        <h1>Children's Fitness</h1>
+        <p class="description">Fitness is crucial for children to develop strength, coordination, and healthy habits. Explore the following fitness options tailored specifically for children's needs.</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="healthcare.html">Back to Healthcare</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <div class="section">
+            <h2>Explore Children's Fitness Topics</h2>
+            <p>Select any of the following options to learn more about fitness topics for children.</p>
+        </div>
 
-    <main>
-        <section class="health-tips">
-            <h2>Health Tips for Children</h2>
-            <div class="tips-buttons">
-                <button class="tip-btn"><a href="childnutri.html">Child Nutrition</a></button>
-                <button class="tip-btn"><a href="vaccine.html">Vaccination Schedule</a></button>
-                <button class="tip-btn"><a href="mentalhchil.html">Mental Health for Children</a></button>
+        <div class="options">
+            <!-- Cardiovascular Fitness -->
+            <div class="option-card">
+                <img src="https://www.boardgains.com/cdn/shop/articles/fun_kids_exercise.png?v=1678202787&width=2048" alt="Cardiovascular Fitness">
+                <a href="child1.html">Cardiovascular Fitness</a>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 FitLife Hub. All Rights Reserved.</p>
-    </footer>
+            <!-- Strength & Muscle Building -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-O2NFlxn3Wx3K6crc-_wOQeekXlumgCq4Kw&s" alt="Strength & Muscle Building">
+                <a href="strength-muscle-building-children.html">Strength & Muscle Building</a>
+            </div>
+
+            <!-- Flexibility & Stretching -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFHWgOdBRbcb05tg9PtgTZ8BnTdTgZ2DZcSA&s" alt="Flexibility & Stretching">
+                <a href="flexibility-stretching-children.html">Flexibility & Stretching</a>
+            </div>
+
+            <!-- Fun Fitness Games -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Qws0xLsThSQlmKQXpSuZMnGBIvmG5v1MIA&s" alt="Fun Fitness Games">
+                <a href="fun-fitness-games.html">Fun Fitness Games</a>
+            </div>
+
+            <!-- Healthy Eating Habits -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXHsGfIBHgKQg9Aazm-k-fVr2od6PAYicFoQ&s" alt="Healthy Eating Habits">
+                <a href="healthy-eating-children.html">Healthy Eating Habits</a>
+            </div>
+
+            <!-- Balance & Coordination Exercises -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKO_cPpfDknxu7Sp3jDr4qfjIL_sAxd5_ndw&s" alt="Balance & Coordination Exercises">
+                <a href="balance-coordination-exercises.html">Balance & Coordination</a>
+            </div>
+
+            <!-- Building Consistency in Fitness -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTstYnblaKi3QTPynPhsDV77mVDqq-IvTz0uw&s" alt="Building Consistency in Fitness">
+                <a href="building-consistency-children.html">Building Consistency</a>
+            </div>
+
+            <!-- Relaxation & Mindfulness -->
+            <div class="option-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnJgtTScPWkzrtuJbpxxPZjLI2QXUB7A7XMg&s" alt="Relaxation & Mindfulness">
+                <a href="relaxation-mindfulness-children.html">Relaxation & Mindfulness</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
