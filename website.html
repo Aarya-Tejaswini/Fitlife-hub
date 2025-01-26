@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background Image */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/abstract-background-gradient-modern-design_677411-3112.jpg'); /* Replace with your desired image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(34, 193, 195, 0.8));
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: #e0e0e0;
+            margin-top: 10px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main section with centered content */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 70vh;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-button {
+            background-color: transparent;
+            color: white;
+            padding: 12px 30px;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-button:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Slight hover effect */
+            border-color: white;
+            color: white;
+        }
+
+        /* Message Box */
+        .message-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .message-box h1 {
+            color: #333333;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .message-box p {
+            font-size: 1.2rem;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Sections */
+        section {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            margin-top: 50px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section h2 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        footer p {
+            color: white;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to FitLife Hub</h1>
+        <p>Your destination for fitness, self-defense, and health!</p>
+    </header>
+
+    <main>
+        <section class="features">
+            <a href="#fitness" class="feature-button">Fitness</a>
+            <a href="selfdefence.html" class="feature-button">Self-Defense</a>
+            <a href="#health" class="feature-button">Health & Wellness</a>
+        </section>
+
+        <div class="message-box">
+            <h1>QUOTE FOR YOU!</h1>
+            <p id="random-message"></p>
+        </div>
+    </main>
+
+    <section id="fitness">
+        <h2>Physical Fitness</h2>
+        <p>Discover fitness routines that help build strength, flexibility, and endurance.</p>
+    </section>
+
+    <section id="selfdefense">
+        <h2>Self-Defense</h2>
+        <p>Learn essential self-defense techniques to protect yourself in any situation.</p>
+    </section>
+
+    <section id="health">
+        <h2>Health & Wellness</h2>
+        <p>Guides and tips for maintaining a balanced and healthy lifestyle.</p>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#fitness">Fitness</a></li>
+            <li><a href="#selfdefense">Self-Defense</a></li>
+            <li><a href="health.html">Health</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2025 Fitness & Health Hub | All rights reserved</p>
+    </footer>
+
+    <script>
+        const messages = [
+            "Your body can stand almost anything. It's your mind that you have to convince.",
+            "Take care of your body. It's the only place you have to live.",
+            "Fitness is not about being better than someone else. It's about being better than you used to be.",
+            "The only bad workout is the one that didn’t happen."
+        ];
+
+        function displayRandomMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById("random-message").textContent = messages[randomIndex];
+        }
+
+        displayRandomMessage();
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Completion</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .certificate {
+            width: 80%;
+            max-width: 800px;
+            padding: 40px;
+            background: white;
+            border: 10px solid #4caf50;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .certificate h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4caf50;
+        }
+
+        .certificate p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .certificate .name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .certificate .score {
+            font-size: 1.1rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <h1>Certificate of Completion</h1>
+        <p>This certificate is proudly presented to:</p>
+        <div class="name" id="userName">Your Name</div>
+        <p>For successfully completing the Disaster Preparedness Quiz.</p>
+        <p class="score" id="userScore"></p>
+        <p><strong>Date:</strong> <span id="date"></span></p>
+    </div>
+
+    <script>
+        // Get name and score from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name');
+        const score = urlParams.get('score');
+
+        // Set name and score
+        document.getElementById('userName').textContent = userName || "Your Name";
+        document.getElementById('userScore').textContent = `Score: ${score}/15`;
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
